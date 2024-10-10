@@ -14,9 +14,10 @@ return new class extends Migration
             $table->text('raw_url');
             $table->bigInteger('last_chapter')->default(1);
             $table->timestamp('last_checked_at')->nullable();
+            $table->timestampTz('updated_at');
+            $table->timestampTz('created_at');
             $table->text('negative_identifier')->nullable();
             $table->bigInteger('chat_id');
-            $table->timestamps();
         });
     }
 
